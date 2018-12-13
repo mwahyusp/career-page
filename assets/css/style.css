@@ -1,0 +1,411 @@
+@import url("https://fonts.googleapis.com/css?family=Hind|Work+Sans");
+
+:root {
+  --first: #3d396d;
+  --second: #aeabc6;
+  --white: #e0c7fe;
+  --dark-purple: #250b52;
+  --light-blue: #81fff9;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--second);
+  font-family: "Hind", sans-serif;
+  background-color: #f8f9fe;
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Work Sans", sans-serif;
+  margin-bottom: 0.6rem;
+}
+
+h2 {
+  margin-bottom: 24px;
+}
+
+section {
+  padding: 64px 12%;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.w-2 {
+  width: calc(100% / 2 - 5% / 2);
+}
+
+.w-3 {
+  width: calc(100% / 3 - 24px);
+  margin: 0 12px;
+  margin-bottom: 32px;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.white {
+  color: #e0c7fe;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+p.title {
+  font-weight: bold;
+}
+
+.btn {
+  border-radius: 20px;
+  padding: 4px 24px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s;
+}
+
+.btn:hover {
+  transform: scale(0.95);
+}
+
+.grad-hiring {
+  background: linear-gradient(to right, #4386e9 0%, #38d5f9 100%);
+}
+
+.grad-browse {
+  background: linear-gradient(to right, #3d24f9 0%, #8117eb 100%);
+}
+
+.black {
+  color: var(--dark-purple);
+}
+
+/* NAV */
+nav {
+  display: flex;
+  padding: 20px 48px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background: linear-gradient(to right, #20074b 0%, #7f4ea7 100%);
+  transition: all 0.5s;
+}
+
+nav.scrolled {
+  padding: 10px 48px;
+  font-size: 16px;
+  background: linear-gradient(to right, #20074b 0%, #7f4ea7 100%);
+}
+
+nav>.top-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav>.top-nav>*:not(:first-of-type) {
+  margin-left: 32px;
+}
+
+/* SECTION HEAD */
+section.head {
+  color: white;
+  padding-top: 215px;
+  background-image: url("../img/backgrounds/head.png");
+  background-position: bottom;
+  background-size: cover;
+  background-position-y: -200px;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+section.head>h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+.team {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 64px;
+  padding-bottom: 32px;
+  margin-top: 64px;
+}
+
+.team>div {
+  width: 380px;
+  padding: 64px;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  background: linear-gradient(to right,
+    rgba(186, 116, 252, 0.9) 0%,
+    rgba(139, 97, 253, 0.9) 100%);
+}
+
+.team>div>h2 {
+  font-weight: 400;
+}
+
+.team>img {
+  width: calc(100% - 100px);
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* PROFILE */
+section.profile {
+  padding-top: 32px;
+}
+
+section.profile .w-3 {
+  padding-right: 32px;
+  font-size: 14px;
+}
+
+.profile h3 {
+  padding: 16px 0;
+}
+
+.profile>p {
+  margin-bottom: 80px;
+}
+
+/* LIVE */
+section.live {
+  padding-top: 182px;
+  padding-bottom: 300px;
+  background-image: url("../img/backgrounds/body.png");
+  background-position: top;
+  background-size: 100vw;
+  background-repeat: no-repeat;
+}
+
+section.live h2 {
+  color: white;
+  margin-top: 16px;
+}
+
+section.live>.discuss {
+  width: 100%;
+  height: 500px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  margin-top: 64px;
+}
+
+.discuss img {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(0.3);
+  transition: transform 0.5s, filter 0.2s;
+}
+
+.discuss img:hover {
+  transform: scale(1.05);
+  filter: grayscale(0);
+}
+
+.img-50 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.img-50>img {
+  width: 100%;
+  height: 100%;
+}
+
+.img-25 {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.img-25>div {
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+}
+
+.img-25>div>img {
+  width: 100%;
+  height: 100%;
+}
+
+/* CAREERS */
+.careers {
+  padding-bottom: 128px;
+}
+
+.positions {
+  width: 100%;
+  margin-top: 44px;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.positions>.tab {
+  cursor: pointer;
+  margin: 0 8px;
+  padding: 0 8px;
+  color: #726e91;
+}
+
+.positions>.tab.active {
+  border-bottom: 2px solid #d5b7ff;
+  font-weight: bold;
+  color: var(--dark-purple);
+}
+
+.job-list>a {
+  height: 120px;
+  border-radius: 5px;
+  color: white;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+  opacity: 1;
+}
+
+.job-list>a.showing {
+  opacity: 0;
+}
+
+.job-list>a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px 0 #00000065;
+}
+
+.job-list>a>h3 {
+  margin-bottom: 0;
+}
+
+.job-list>.engineer {
+  background: linear-gradient(to right, #0068ff, #01d6ff);
+}
+
+.job-list>.design {
+  background: linear-gradient(to right, #fc6a6d, #ff904b);
+}
+
+.job-list>.product {
+  background: linear-gradient(to right, #2937a2, #75aef3);
+}
+
+.job-list>.marketing {
+  background: linear-gradient(to right, #00ff73, #01ff95);
+}
+
+.job-list>.engineer {
+  background: linear-gradient(to right, #0068ff, #01d6ff);
+}
+
+/* LOOKING FOR */
+.looking {
+  font-size: 1.2rem;
+  align-items: center;
+  padding-bottom: 64px;
+}
+
+.looking>div {
+  padding: 64px;
+}
+
+.looking>div:nth-of-type(2) {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.looking a {
+  color: white;
+  background-color: transparent;
+  padding: 0;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.looking a:hover {
+  color: var(--light-blue);
+  padding: 4px 16px;
+}
+
+.looking img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 2px 25px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* FOOTER */
+.footer {
+  background-image: url("..//img/backgrounds/footer.png");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 64px;
+  padding-bottom: 32px;
+  color: white;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .logo>img {
+  filter: hue-rotate(180deg);
+}
+
+footer ul {
+  list-style: none;
+}
+
+li.title {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
